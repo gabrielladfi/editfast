@@ -39,7 +39,7 @@ async def ask_question(request: QuestionRequest):
         response = query({
             "question": f"{question}",
         })
-        final_response = response["response"]["text"]
+        final_response = response["text"]
         return {"response": final_response}
     except:
         return {"response": "No encuentro información al respecto"}
